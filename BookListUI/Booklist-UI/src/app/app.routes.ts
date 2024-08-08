@@ -4,7 +4,8 @@ import { BookDetailComponent } from './components/book-detail/book-detail.compon
 import { BookFormComponent } from './components/book-form/book-form.component';
 
 export const routes: Routes = [
-  { path: '', component: BookListComponent },
+  { path: '', redirectTo: '/book-list', pathMatch: 'full' },
+  { path: 'book-list', component: BookListComponent },
   { path: 'book/:id', component: BookDetailComponent },
   { path: 'add-book', component: BookFormComponent },
   { path: 'edit-book/:id', component: BookFormComponent },

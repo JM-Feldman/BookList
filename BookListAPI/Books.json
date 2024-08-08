@@ -3,7 +3,49 @@
     "Id": 1,
     "Title": "Sample Book 1",
     "Author": "Author 1",
-    "ISBN": "1234567890",
-    "PublishedDate": "2020-01-01"
+    "ISBN": "1234567890101",
+    "PublishedDate": "2020-01-01T00:00:00"
+  },
+  {
+    "Id": 2,
+    "Title": "Sample Book 2",
+    "Author": "Author 2",
+    "ISBN": "9781234567897",
+    "PublishedDate": "2021-02-15T00:00:00"
+  },
+  {
+    "Id": 3,
+    "Title": "Sample Book 3",
+    "Author": "Author 3",
+    "ISBN": "9781234567898",
+    "PublishedDate": "2019-07-22T00:00:00"
+  },
+  {
+    "Id": 4,
+    "Title": "Sample Book 4",
+    "Author": "Author 4",
+    "ISBN": "9781234567899",
+    "PublishedDate": "2018-11-30T00:00:00"
+  },
+  {
+    "Id": 5,
+    "Title": "Sample Book 5",
+    "Author": "Author 5",
+    "ISBN": "9781234567800",
+    "PublishedDate": "2022-03-05T00:00:00"
+  },
+  {
+    "Id": 6,
+    "Title": "Edited book 1",
+    "Author": "Author 6",
+    "ISBN": "9781234567801",
+    "PublishedDate": "2017-05-18T00:00:00"
+  },
+  {
+    "Id": 7,
+    "Title": "Test Book 1",
+    "Author": "James Feldman",
+    "ISBN": "1400121812344",
+    "PublishedDate": "2024-08-07T00:00:00"
   }
 ]

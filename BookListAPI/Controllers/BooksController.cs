@@ -19,7 +19,11 @@ namespace BookListAPI.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Book>> GetBooks([FromQuery] string title, [FromQuery] string author, [FromQuery] int page = 1, [FromQuery] int pageSize = 10)
+        public ActionResult<IEnumerable<Book>> GetBooks(
+        [FromQuery] string title = null,
+        [FromQuery] string author = null,
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 10)
         {
             var books = _bookService.GetBooks();
 
@@ -36,6 +40,7 @@ namespace BookListAPI.Controllers
             var paginatedBooks = books.Skip((page - 1) * pageSize).Take(pageSize).ToList();
             return Ok(paginatedBooks);
         }
+
 
         [HttpGet("{id}")]
         public ActionResult<Book> GetBook(int id)
