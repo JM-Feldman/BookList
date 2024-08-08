@@ -1,0 +1,38 @@
+<div class="home-container">
+    <h1>{{ bookId ? 'Edit Book' : 'Add Book' }}</h1>
+    <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+      <label for="title">Title</label>
+      <input id="title" formControlName="title" type="text" />
+      <div *ngIf="bookForm.controls['title'].invalid && bookForm.controls['title'].touched">
+        Title is required
+      </div>
+      
+      <label for="author">Author</label>
+      <input id="author" formControlName="author" type="text" />
+      <div *ngIf="bookForm.controls['author'].invalid && bookForm.controls['author'].touched">
+        Author is required
+      </div>
+      
+      <label for="isbn">ISBN</label>
+      <input id="isbn" formControlName="isbn" type="text" />
+      <div *ngIf="bookForm.controls['isbn'].invalid && bookForm.controls['isbn'].touched">
+        ISBN is required
+      </div>
+      
+      <label for="publishedDate">Published Date</label>
+    <input id="publishedDate" formControlName="publishedDate" type="date" />
+    <div *ngIf="bookForm.get('publishedDate')?.errors?.['required'] && bookForm.get('publishedDate')?.touched">
+      Published Date is required
+    </div>
+    <div *ngIf="bookForm.get('publishedDate')?.errors?.['futureDate'] && bookForm.get('publishedDate')?.touched">
+      Published Date cannot be in the future
+    </div>
+  
+      <button type="submit">Save</button>
+      <button type="button" (click)="navigateToHome()">Cancel</button>
+    </form>
+  </div>
+  
+  
+  
+  

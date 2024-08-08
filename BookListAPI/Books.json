@@ -1,0 +1,9 @@
+[
+  {
+    "Id": 1,
+    "Title": "Sample Book 1",
+    "Author": "Author 1",
+    "ISBN": "1234567890",
+    "PublishedDate": "2020-01-01"
+  }
+]

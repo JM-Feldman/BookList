@@ -1,0 +1,9 @@
+<div class="home-container" *ngIf="book">
+    <h1>{{ book.title }}</h1>
+    <p><strong>Author:</strong> {{ book.author }}</p>
+    <p><strong>ISBN:</strong> {{ book.isbn }}</p>
+    <p><strong>Published Date:</strong> {{ book.publishedDate | date }}</p>
+    <button (click)="navigateToHome()">Back to List</button>
+  </div>
+  
+  

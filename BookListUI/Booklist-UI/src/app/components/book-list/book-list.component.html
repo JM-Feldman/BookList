@@ -1,0 +1,25 @@
+<div class="home-container">
+    <h1>Book List</h1>
+    <button (click)="navigateToAddBook()">Add Book</button>
+  
+    <form [formGroup]="searchForm" (ngSubmit)="searchBooks()">
+      <label for="title">Title</label>
+      <input id="title" formControlName="title" type="text" />
+      
+      <label for="author">Author</label>
+      <input id="author" formControlName="author" type="text" />
+      
+      <button type="submit">Search</button>
+    </form>
+  
+    <ul>
+      <li *ngFor="let book of books">
+        <span (click)="navigateToDetailBook(book.id)">{{ book.title }} - {{ book.author }}</span>
+        <button (click)="navigateToEditBook(book.id)">Edit</button>
+        <button (click)="deleteBook(book.id)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  
+  
+  
